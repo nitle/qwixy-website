@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Qwixy - тиммейты в Telegram</title>
+  <meta name="description" content="Qwixy помогает найти тиммейта по игре, роли, рангу и языку прямо в Telegram." />
+  <meta name="theme-color" content="#080712" />
+
+  <meta property="og:title" content="Qwixy - тиммейты в Telegram" />
+  <meta property="og:description" content="Выбери игру, роль и ранг. Qwixy покажет подходящих игроков прямо в Telegram." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/qwixy-mascot-new.png" />
+
+  <link rel="icon" type="image/png" href="./assets/favicon-mascot.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Qwixy">
+      <img src="./assets/qwixy-mascot-cut.png" alt="" />
+      <span>Qwixy</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Основная навигация">
+      <a href="#how" data-i18n="navHow">Как работает</a>
+      <a href="#steam" data-i18n="navSteam">Steam</a>
+    </nav>
+
+    <div class="lang-switch" aria-label="Переключатель языка">
+      <span class="lang-slider" aria-hidden="true"></span>
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="uk">UA</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <h1 data-i18n="heroTitle">Играй с теми, кто подходит.</h1>
+        <p class="hero-text" data-i18n="heroText">Qwixy подбирает тиммейтов по игре, роли, рангу и языку прямо в Telegram.</p>
+        <a class="btn btn-primary" href="https://t.me/QwixyMatchBot" target="_blank" rel="noopener">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9.04 15.51l-.38 4.03c.54 0 .77-.23 1.05-.5l2.52-2.4 5.22 3.82c.96.53 1.64.25 1.9-.88l3.44-16.1c.3-1.4-.51-1.95-1.44-1.6L1.7 9.74c-1.37.53-1.35 1.3-.23 1.64l5.12 1.6L18.5 5.5c.56-.37 1.07-.17.65.2L9.04 15.51z"/>
+          </svg>
+          <span data-i18n="openBot">Открыть Telegram-бота</span>
+        </a>
+        <div class="hero-games" aria-label="Популярные игры в Qwixy">
+          <span style="--i:0">Dota 2</span>
+          <span style="--i:1">CS2</span>
+          <span style="--i:2">Valorant</span>
+          <span style="--i:3">PUBG</span>
+          <span style="--i:4">LoL</span>
+          <span style="--i:5">Fortnite</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="simple-section section reveal" id="how">
+      <p class="section-label" data-i18n="howKicker">Как работает</p>
+      <h2 data-i18n="problemTitle">Три шага. Без лишнего.</h2>
+      <p class="section-lead" data-i18n="howLead">Выбираешь основу, Qwixy собирает профиль и показывает подходящих игроков.</p>
+      <div class="steps reveal-cascade">
+        <div class="step-card">
+          <div class="step-head">
+            <span class="step-number">1</span>
+            <span class="step-icon" aria-hidden="true">
+              <svg class="gamepad-icon" viewBox="0 0 24 24">
+                <path class="gamepad-body" transform="translate(1.35 -3.16) scale(0.95)" d="M4.469 8.156v-2.25h2.25v2.25h-2.25zM15.688 5.906h2.219v2.25h-2.219v-2.25zM20.156 12.625v-4.469h2.25v8.969h-2.25v2.219h-2.25v2.25h2.25v2.25h2.25v2.219h-4.5v-2.219h-2.219v-2.25h-8.969v2.25h-2.25v2.219h-4.469v-2.219h2.25v-2.25h2.219v-2.25h-2.219v-2.219h-2.25v-8.969h2.25v4.469h2.219v-2.219h2.25v-2.25h2.25v2.25h4.469v-2.25h2.25v2.25h2.219v2.219h2.25zM8.969 14.875v-2.25h-2.25v2.25h2.25zM15.688 14.875v-2.25h-2.25v2.25h2.25z" />
+              </svg>
+            </span>
+          </div>
+          <strong data-i18n="stepOneTitle">Выбери игру</strong>
+          <p data-i18n="stepOneText">Выбираешь то, во что уже играешь.</p>
+          <small data-i18n="stepOneNote">6 популярных игр</small>
+        </div>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="step-number">2</span>
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 11.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z" />
+                <path d="M5.2 19.5a6.8 6.8 0 0 1 13.6 0" />
+              </svg>
+            </span>
+          </div>
+          <strong data-i18n="stepTwoTitle">Собери профиль</strong>
+          <p data-i18n="stepTwoText">Роль, ранг, язык и короткое описание.</p>
+          <small data-i18n="stepTwoNote">Быстро, без лишних экранов</small>
+        </div>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="step-number">3</span>
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21a9 9 0 1 0-9-9 9 9 0 0 0 9 9Z" />
+                <path d="m8.2 12.2 2.3 2.3 5.3-5.5" />
+              </svg>
+            </span>
+          </div>
+          <strong data-i18n="stepThreeTitle">Получи матч</strong>
+          <p data-i18n="stepThreeText">Если совпали - переходите в Telegram.</p>
+          <small data-i18n="stepThreeNote">Сразу в боте</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="steam section reveal" id="steam" aria-labelledby="steamTitle">
+      <div class="steam-copy">
+        <p class="section-label" data-i18n="steamEyebrow">Быстрый старт</p>
+        <h2 id="steamTitle" data-i18n="steamTitle">Профиль за несколько секунд.</h2>
+        <p data-i18n="steamText">Автозаполнение работает для Dota 2 и CS2. Остальное можно добавить вручную.</p>
+      </div>
+      <div class="steam-demo" id="preview" aria-label="Пример заполнения профиля через Steam">
+        <div class="demo-topbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="demo-chat" id="demoChat">
+          <p class="bubble user" data-typed="steamcommunity.com/id/myky">steamcommunity.com/id/myky</p>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p class="bubble bot" data-i18n="steamFound" data-typed="Steam-профиль найден">Steam-профиль найден</p>
+          <p class="bubble bot accent">
+            <strong data-i18n="steamFilled" data-typed="Профиль автоматически заполнен">Профиль автоматически заполнен</strong>
+            <span>Dota 2</span>
+            <span>CS2</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section reveal">
+      <img src="./assets/qwixy-mascot-cut.png" alt="" />
+      <h2 data-i18n="finalTitle">Открой Qwixy.</h2>
+      <p data-i18n="finalText">Создай профиль и найди тиммейта прямо в Telegram.</p>
+      <a class="btn btn-primary" href="https://t.me/QwixyMatchBot" target="_blank" rel="noopener">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9.04 15.51l-.38 4.03c.54 0 .77-.23 1.05-.5l2.52-2.4 5.22 3.82c.96.53 1.64.25 1.9-.88l3.44-16.1c.3-1.4-.51-1.95-1.44-1.6L1.7 9.74c-1.37.53-1.35 1.3-.23 1.64l5.12 1.6L18.5 5.5c.56-.37 1.07-.17.65.2L9.04 15.51z"/>
+        </svg>
+        <span data-i18n="openBot">Открыть Telegram-бота</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Qwixy</span>
+    <a href="https://t.me/QwixyMatchBot" target="_blank" rel="noopener">@QwixyMatchBot</a>
+  </footer>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
